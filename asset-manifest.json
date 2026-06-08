@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/nyu_distortionsCFP_website/static/css/main.c0767b0f.css",
-    "main.js": "/nyu_distortionsCFP_website/static/js/main.bcaa20f5.js",
-    "index.html": "/nyu_distortionsCFP_website/index.html",
-    "main.c0767b0f.css.map": "/nyu_distortionsCFP_website/static/css/main.c0767b0f.css.map",
-    "main.bcaa20f5.js.map": "/nyu_distortionsCFP_website/static/js/main.bcaa20f5.js.map"
+    "main.css": "/static/css/main.c0767b0f.css",
+    "main.js": "/static/js/main.bcaa20f5.js",
+    "index.html": "/index.html",
+    "main.c0767b0f.css.map": "/static/css/main.c0767b0f.css.map",
+    "main.bcaa20f5.js.map": "/static/js/main.bcaa20f5.js.map"
   },
   "entrypoints": [
     "static/css/main.c0767b0f.css",
