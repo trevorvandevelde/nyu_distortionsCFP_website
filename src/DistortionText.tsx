@@ -5,6 +5,7 @@ type Props = {
   fontSize?: number;
   varySize?: boolean;
   customSizes?: number[];
+  color?: string;
 };
 
 export function DistortionText({
@@ -12,6 +13,7 @@ export function DistortionText({
   fontSize = 100,
   varySize = true,
   customSizes,
+  color = "white",
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
@@ -89,17 +91,17 @@ export function DistortionText({
 
     const render = () => {
       frame++;
-      const time = frame * 0.015;
+      const time = frame * 0.15;
 
       ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "white";
+      ctx.fillStyle = color;
 
       // base
       drawText(0, 0, 0.9);
 
       // distortion
-      const sliceHeight = 1;
-      const intensity = hovering.current ? 10 : 5;
+      const sliceHeight = 3;
+      const intensity = hovering.current ? 5 : 2;
 
       for (let y = -(height/2); y < height+(height/2); y += sliceHeight) {
         const jitter =

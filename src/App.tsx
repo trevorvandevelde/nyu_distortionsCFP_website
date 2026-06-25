@@ -2,9 +2,12 @@ import './App.css';
 import { DistortionText }  from "./DistortionText.tsx"
 import { MovingTextBorder, MovingTextBorderVertical } from "./MovingTextBorder.tsx"
 
+
+var Red = "#ff0000";
+
 export default function App() {
   const movingText =
-    "distortion,  overdrive,  grain,  synthesis,  noise,  static,  interference,  warping,  bending,  spirals,  fractals,  plasticity,  deformation,  disinformation,  misinformation,  fascism,  propaganda,  censorship,  post-truth,  conspiracy,  fraud,  fakes,  forgery,  bootlegging,  piracy,  artificiality,  streaming  manipulation,  failure,  corruption,  glitch,  mutation,  transformation,  translation,  disruption,  alternate  realities,  queer  temporalities,  liminality,  non-place,  time,  space,  simulation,  speculative  fiction,  sonic  fiction,  critical  fabulation,  futurities,  para-sociality,  circulation,  cybernetics,  artificial  intelligence,  superstition,  urban  legend,  (media)  folklore,  techno-doping,  surgery,  biohacking,  trauma,  mental  health,  ghosts,  haunting,  vertigo,  disorientation,  neurodivergence  and  masking,  alternate  tunings,  DIY  instruments/music  spaces,  hacking,  auditory  illusions"
+    "DISTORTION  OVERDRIVE  GRAIN  SYNTHESIS  NOISE  STATIC  INTERFERENCE  WARPING  BENDING  SPIRALS  FRACTALS  PLASTICITY  DEFORMATION  DISINFORMATION  MISINFORMATION  FASCISM  PROPAGANDA  CENSORSHIP  POST-TRUTH  CONSPIRACY  FRAUD  FAKES  FORGERY  BOOTLEGGING  PIRACY  ARTIFICIALITY  STREAMING  MANIPULATION  FAILURE  CORRUPTION  GLITCH  MUTATION  TRANSFORMATION  TRANSLATION  DISRUPTION  ALTERNATE  REALITIES  QUEER  TEMPORALITIES  LIMINALITY  NON-PLACE  TIME  SPACE  SIMULATION  SPECULATIVE  FICTION  SONIC  FICTION  CRITICAL  FABULATION  FUTURITIES  PARA-SOCIALITY  CIRCULATION  CYBERNETICS  ARTIFICIAL  INTELLIGENCE  SUPERSTITION  URBAN  LEGEND  (MEDIA)  FOLKLORE  TECHNO-DOPING  SURGERY  BIOHACKING  TRAUMA  MENTAL  HEALTH  GHOSTS  HAUNTING  VERTIGO  DISORIENTATION  NEURODIVERGENCE  AND  MASKING  ALTERNATE  TUNINGS  DIY  INSTRUMENTS/MUSIC  SPACES  HACKING  AUDITORY  ILLUSIONS"
 
   return (
     <div className="App" style={{ position: 'relative', minHeight: '100vh' }}>
@@ -15,7 +18,7 @@ export default function App() {
         <MovingTextBorder
           text={movingText}
           fontSize={22}
-          color="#ff6666"
+          color= "#ff0000"
           backgroundColor="#282c34"
           height={48}
           speed={80}
@@ -28,7 +31,7 @@ export default function App() {
         <MovingTextBorder
           text={movingText}
           fontSize={22}
-          color="#ff6666"
+          color="#ff0000"
           backgroundColor="#282c34"
           height={48}
           speed={80}
@@ -45,21 +48,24 @@ export default function App() {
 
         <div style={{ marginBottom: 0, textAlign: "center" }}>
           <p className="cfp_description" style={{ marginBottom: 0, textAlign: "center", fontSize: 35 }}>
-            Keynote Speaker - <a href="https://maramills.org/" target="_blank" rel="noopener noreferrer" style={{ color: "#ff6666", textDecoration: "underline" }}>Mara Mills</a>
+            Keynote Speaker - <a href="https://maramills.org/" target="_blank" rel="noopener noreferrer" style={{ color: "#ff0000", textDecoration: "underline" }}>Mara Mills</a>
           </p>
             <p style={{ fontSize: 20, marginTop: 0, marginBottom: 0, textAlign: "center", maxWidth: 700, marginLeft: "auto", marginRight: "auto", whiteSpace: "normal" }}>
               (Associate Professor and Ph.D. Director in the Department of Media, Culture, and Communication at New York University)
             </p>
         </div>
         <div style={{ marginBottom: 0, textAlign: "center" }}>
-          <p className="cfp_description" style={{ marginBottom: 0, textAlign: "center", fontSize: 35}}>Keynote Performer - TBA</p>
+          <p className="cfp_description" style={{ marginBottom: 0, textAlign: "center", fontSize: 35}}>
+            Keynote Performer - <a href="https://www.kabaird.com//" target="_blank" rel="noopener noreferrer" style={{ color: "#ff0000", textDecoration: "underline" }}>Ka Baird</a>
+            
+            </p>
               <p style={{ fontSize: 20, marginTop: 0, marginBottom: 0, textAlign: "center", maxWidth: 700, marginLeft: "auto", marginRight: "auto", whiteSpace: "normal" }}>
               </p>
         </div>
         <p className="cfp_description"></p>
 
         <p className="cfp_description" style={{ lineHeight: 1.5 }}>
-          The term <DistortionText text="distortion" fontSize={23} varySize={false} /> is derived from the Latin <em>dis</em>, meaning apart or away, and <em>torquere</em>,
+          The term <DistortionText text="distortion" varySize={false} /> is derived from the Latin <em>dis</em>, meaning apart or away, and <em>torquere</em>,
           meaning to twist. It refers to the bending, warping, or deformation of an object’s shape and/or form.
           In a sonic context, <DistortionText text="distortion" fontSize={23} varySize={false} /> is used to describe the alteration of an audio signal or wave. It is often
           characterized by a harsh, gritty sound. Through the amplification of what are generally considered
@@ -108,8 +114,8 @@ export default function App() {
 
         
         
-       <p  style={{ marginBottom: 4, marginTop: 24 }}>
-          <b>For papers/presentations:</b>
+       <p  className="cfp_description" style={{ marginBottom: 4, marginTop: 24 }}>
+          For papers/presentations:
         </p>
         <ul className="cfp_description" style={{ listStyleType: 'disc', paddingLeft: 120, paddingRight: 100, textAlign: 'left', marginTop: 4 }}>
           <li>Title</li>
@@ -120,8 +126,8 @@ export default function App() {
           <li>A/V or other technical requirements</li>
         </ul>
 
-        <p style={{ marginBottom: 4, marginTop: 24 }}>
-          <b>For performance/installations</b>
+        <p className="cfp_description" style={{ marginBottom: 4, marginTop: 24 }}>
+          For performance/installations
         </p>
         <ul className="cfp_description" style={{ listStyleType: 'disc', paddingLeft: 120, paddingRight: 100, textAlign: 'left', marginTop: 4 }}>
           <li>Title</li>
@@ -148,7 +154,6 @@ export default function App() {
         
   
 
-      
       
       
       </header>

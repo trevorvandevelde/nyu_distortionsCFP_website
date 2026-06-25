@@ -78,8 +78,8 @@ export function MovingTextBorder({
         height: height,
         display: 'block',
         background: backgroundColor,
-        borderTop: '2.5px solid #ff2222',
-        borderBottom: '2.5px solid #ff2222'
+        borderTop: '2.5px solid #ff0000',
+        borderBottom: '2.5px solid #ff0000'
       }}
       height={height}
     />
@@ -167,10 +167,10 @@ export function MovingTextBorderVertical({
         height: '100vh',
         display: 'block',
         background: backgroundColor,
-        borderTop: '2.5px solid #ff2222',
-        borderBottom: '2.5px solid #ff2222',
-        borderLeft: '2.5px solid #ff2222', // outer edge for right border
-        borderRight: '2.5px solid #ff2222', // outer edge for left border
+        borderTop: '2.5px solid #ff0000',
+        borderBottom: '2.5px solid #ff0000',
+        borderLeft: '2.5px solid #ff0000', // outer edge for right border
+        borderRight: '2.5px solid #ff0000', // outer edge for left border
       }}
       width={width}
       height={window.innerHeight}
