@@ -8,6 +8,64 @@ a {
 body {
   background: #000000;
 }
+
+.site-navigation {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  z-index: 1999;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  overflow-x: auto;
+  background: #000000;
+  border-bottom: 1px solid #ff0000;
+  scrollbar-width: none;
+}
+
+.site-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.site-navigation__tab {
+  flex: 0 0 auto;
+  padding: 9px 24px 8px;
+  color: #ffffff;
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.site-navigation__tab:hover,
+.site-navigation__tab:focus-visible,
+.site-navigation__tab--active {
+  color: #000000;
+  background: #ff0000;
+  text-decoration: none;
+}
+
+[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 600px) {
+  .site-navigation {
+    justify-content: flex-start;
+  }
+
+  .site-navigation__tab {
+    padding-inline: 16px;
+    font-size: 16px;
+  }
+
+  .App-header {
+    padding: 132px 5% 10%;
+  }
+}
 .App {
   text-align: center;
 }
@@ -33,6 +91,192 @@ body {
   font-size: 12px;
   color: white;
   padding: 10%;
+  padding-top: 132px;
+}
+
+.home-page {
+  position: relative;
+  justify-content: flex-start;
+}
+
+.home-title {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-details {
+  position: absolute;
+  top: calc(42% + 85px);
+  left: 0;
+  right: 0;
+}
+
+.home-location {
+  margin: 0;
+}
+
+.App--home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App--home .App-header {
+  box-sizing: border-box;
+  height: 100vh;
+  min-height: 0;
+}
+
+.filler-page {
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+.page-message {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  text-align: center;
+}
+
+.contact-section {
+  width: 100%;
+  max-width: 900px;
+  padding-inline: 0;
+  text-align: left;
+}
+
+.registration-content p {
+  font-family: "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.registration-content a {
+  font-size: inherit;
+}
+
+.venue-content {
+  width: 100%;
+  max-width: 900px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.keynote-page {
+  justify-content: flex-start;
+}
+
+.keynote-profile {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.keynote-profile h2 {
+  margin: 28px 0 8px;
+  color: #ff0000;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.keynote-profile h3 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.keynote-placeholder {
+  margin: 8px 0;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.keynote-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  height: 260px;
+  margin: 16px auto;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  font-size: 23px;
+}
+
+.keynote-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .keynote-profile h2 {
+    font-size: 24px;
+  }
+
+  .keynote-profile h3,
+  .keynote-placeholder {
+    font-size: 20px;
+  }
+
+  .keynote-photo {
+    height: 200px;
+  }
+}
+
+.venue-content h2 {
+  margin: 28px 0 10px;
+  color: #ff0000;
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.venue-highlight {
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.venue-content p {
+  margin: 16px 0;
+}
+
+.venue-content ol {
+  margin: 16px 0 24px;
+  padding-left: 34px;
+}
+
+.venue-content li {
+  padding-left: 6px;
+}
+
+@media (max-width: 600px) {
+  .registration-content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .venue-content h2 {
+    font-size: 24px;
+  }
+
+  .venue-highlight {
+    font-size: 20px;
+  }
 }
 
 .App-link {
