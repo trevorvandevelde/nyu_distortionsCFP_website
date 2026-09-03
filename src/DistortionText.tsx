@@ -6,6 +6,7 @@ type Props = {
   varySize?: boolean;
   customSizes?: number[];
   color?: string;
+  italic?: boolean;
 };
 
 export function DistortionText({
@@ -14,6 +15,7 @@ export function DistortionText({
   varySize = true,
   customSizes,
   color = "white",
+  italic = true,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
@@ -39,7 +41,7 @@ export function DistortionText({
     for (let i = 0; i < text.length; i++) {
       const size = getSize(i);
       maxSize = Math.max(maxSize, size);
-      ctx.font = `italic ${size}px \"Times New Roman\", serif`;
+      ctx.font = `${italic ? "italic " : ""}${size}px \"Times New Roman\", serif`;
       const letter = text[i];
       if (letter === " ") {
         totalWidth += fontSize * 0.3;
@@ -73,7 +75,7 @@ export function DistortionText({
       for (let i = 0; i < text.length; i++) {
         const size = getSize(i);
 
-        ctx.font = `italic ${size}px "Times New Roman", serif`;
+        ctx.font = `${italic ? "italic " : ""}${size}px "Times New Roman", serif`;
         ctx.globalAlpha = alpha;
 
         const letter = text[i];
@@ -101,12 +103,12 @@ export function DistortionText({
 
       // distortion
       const sliceHeight = 3;
-      const intensity = hovering.current ? 5 : 2;
+      const intensity = hovering.current ? 12 : 2;
 
       for (let y = -(height/2); y < height+(height/2); y += sliceHeight) {
         const jitter =
           (Math.random() - 0.5) *
-          (hovering.current ? 7 : 3);
+          (hovering.current ? 18 : 3);
 
         const wave =
           Math.sin(y * 0.01 + time) * intensity;
@@ -135,7 +137,7 @@ export function DistortionText({
       canvas.removeEventListener("mouseenter", enter);
       canvas.removeEventListener("mouseleave", leave);
     };
-  }, [text, fontSize, varySize, customSizes]);
+  }, [text, fontSize, varySize, customSizes, color, italic]);
 
   return (
     <canvas
