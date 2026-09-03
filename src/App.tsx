@@ -172,9 +172,9 @@ export default function App() {
             </div>
           </div>
           <div className="home-details">
-            <DistortionText text="October 2-3, 2026" fontSize={50} varySize={false} color={homeColor} italic={false}/>
+            <DistortionText text="October 2-3, 2026" fontSize={50} varySize={false} color={homeColor} italic={false} responsive/>
             <p className="home-location">
-              <DistortionText text="New York University GSAS Music Department" fontSize={30} varySize={false} color={homeColor} italic={false}/>
+              <DistortionText text="New York University GSAS Music Department" fontSize={30} varySize={false} color={homeColor} italic={false} responsive/>
             </p>
           </div>
         </header>

@@ -7,6 +7,7 @@ type Props = {
   customSizes?: number[];
   color?: string;
   italic?: boolean;
+  responsive?: boolean;
 };
 
 export function DistortionText({
@@ -16,6 +17,7 @@ export function DistortionText({
   customSizes,
   color = "white",
   italic = true,
+  responsive = false,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
@@ -142,6 +144,7 @@ export function DistortionText({
   return (
     <canvas
       ref={canvasRef}
+      className={responsive ? "distortion-text-canvas--responsive" : undefined}
       style={{
         display: "inline-block",
         background: "transparent",

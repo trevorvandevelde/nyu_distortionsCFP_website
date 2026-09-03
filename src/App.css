@@ -157,6 +157,13 @@ body {
   right: 0;
   width: min(78vw, 1050px);
   margin: 0 auto;
+  max-width: calc(100% - 24px);
+  overflow: hidden;
+}
+
+.home-details .distortion-text-canvas--responsive {
+  max-width: 100%;
+  height: auto;
 }
 
 .home-location {
