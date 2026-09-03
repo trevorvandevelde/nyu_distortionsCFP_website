@@ -100,6 +100,7 @@ function KaBairdBio() {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(getCurrentPage);
+  const [homeColor, setHomeColor] = useState("#f04444");
   const movingText =
     "DISTORTION  OVERDRIVE  GRAIN  SYNTHESIS  NOISE  STATIC  INTERFERENCE  WARPING  BENDING  SPIRALS  FRACTALS  PLASTICITY  DEFORMATION  DISINFORMATION  MISINFORMATION  FASCISM  PROPAGANDA  CENSORSHIP  POST-TRUTH  CONSPIRACY  FRAUD  FAKES  FORGERY  BOOTLEGGING  PIRACY  ARTIFICIALITY  STREAMING  MANIPULATION  FAILURE  CORRUPTION  GLITCH  MUTATION  TRANSFORMATION  TRANSLATION  DISRUPTION  ALTERNATE  REALITIES  QUEER  TEMPORALITIES  LIMINALITY  NON-PLACE  TIME  SPACE  SIMULATION  SPECULATIVE  FICTION  SONIC  FICTION  CRITICAL  FABULATION  FUTURITIES  PARA-SOCIALITY  CIRCULATION  CYBERNETICS  ARTIFICIAL  INTELLIGENCE  SUPERSTITION  URBAN  LEGEND  (MEDIA)  FOLKLORE  TECHNO-DOPING  SURGERY  BIOHACKING  TRAUMA  MENTAL  HEALTH  GHOSTS  HAUNTING  VERTIGO  DISORIENTATION  NEURODIVERGENCE  AND  MASKING  ALTERNATE  TUNINGS  DIY  INSTRUMENTS/MUSIC  SPACES  HACKING  AUDITORY  ILLUSIONS "
 
@@ -167,13 +168,13 @@ export default function App() {
         <header className="App-header home-page" id="home">
           <div className="home-title">
             <div className="distortion-hero">
-              <DistortionHero text="DISTORTIONS" />
+              <DistortionHero text="DISTORTIONS" onColorChange={setHomeColor} />
             </div>
           </div>
           <div className="home-details">
-            <DistortionText text="October 2-3, 2026" fontSize={40} varySize={false} color="#000000" italic={false}/>
+            <DistortionText text="October 2-3, 2026" fontSize={50} varySize={false} color={homeColor} italic={false}/>
             <p className="home-location">
-              <DistortionText text="New York University GSAS Music Department" fontSize={22} varySize={false} color="#000000" italic={false}/>
+              <DistortionText text="New York University GSAS Music Department" fontSize={30} varySize={false} color={homeColor} italic={false}/>
             </p>
           </div>
         </header>

@@ -2,15 +2,20 @@ import { useEffect, useRef, useState } from "react";
 
 type DistortionHeroProps = {
   text: string;
+  onColorChange?: (color: string) => void;
 };
 
 const backgroundColors = ["#f04444", "#2517b8", "#f5d957"];
 
-export default function DistortionHero({ text }: DistortionHeroProps) {
+export default function DistortionHero({ text, onColorChange }: DistortionHeroProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [backgroundColor, setBackgroundColor] = useState(
     () => backgroundColors[Math.floor(Math.random() * backgroundColors.length)]
   );
+
+  useEffect(() => {
+    onColorChange?.(backgroundColor);
+  }, [backgroundColor, onColorChange]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
