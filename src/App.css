@@ -350,11 +350,11 @@ body {
 
   .keynote-profile h3,
   .keynote-placeholder {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .keynote-bio {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .keynote-photo {
@@ -397,15 +397,15 @@ body {
 
 @media (max-width: 600px) {
   .contact-section.cfp_description {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .registration-content p {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   #call-for-proposals .cfp_description {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 
@@ -415,7 +415,7 @@ body {
   }
 
   .venue-highlight {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 

@@ -126,7 +126,7 @@
   }
 
   .schedule-content {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .schedule-tabs {
@@ -134,11 +134,19 @@
   }
 
   .schedule-heading {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .schedule-entry {
-    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-columns: 165px minmax(0, 1fr);
     gap: 12px;
+  }
+
+  .schedule-times {
+    font-size: 16px;
+  }
+
+  .schedule-information > div:first-child {
+    font-size: 16px;
   }
 }

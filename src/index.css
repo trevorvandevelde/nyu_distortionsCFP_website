@@ -23,6 +23,6 @@ code {
 @media (max-width: 600px) {
   .cfp_description {
     padding-inline: 24px;
-    font-size: 24px;
+    font-size: 16px;
   }
 }
