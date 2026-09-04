@@ -5,13 +5,13 @@
   box-sizing: border-box;
   padding-top: 132px;
   padding-bottom: 120px;
-  color: #ff0000;
+  color: #fa4e2d;
 }
 
 .schedule-content {
   margin: 0;
   font-family: "Times New Roman", serif;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.35;
   text-align: left;
 }
@@ -25,7 +25,7 @@
 
 .schedule-intro {
   margin-bottom: 20px;
-  color: #ff0000;
+  color: #fa4e2d;
   font-family: "Times New Roman", serif;
   font-size: 28px;
   line-height: 1.35;
@@ -38,7 +38,7 @@
 
 .schedule-tab {
   padding: 10px 24px;
-  border: 1px solid #ff0000;
+  border: 1px solid #fa4e2d;
   background: #000000;
   color: #ffffff;
   cursor: pointer;
@@ -49,26 +49,28 @@
 .schedule-tab:hover,
 .schedule-tab:focus-visible,
 .schedule-tab-active {
-  background: #ff0000;
+  background: #fa4e2d;
   color: #000000;
 }
 
 .schedule-entry {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 20px;
   min-height: 1.35em;
   margin-bottom: 16px;
 }
 
 .schedule-times {
-  color: #ff0000;
+  color: #fa4e2d;
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 .schedule-information {
   min-width: 0;
   padding: 8px 12px;
-  border: 1px solid #ff0000;
+  border: 1px solid #fa4e2d;
   color: #ffffff;
   text-align: left;
 }
@@ -84,12 +86,13 @@
 }
 
 .schedule-information > div:first-child {
-  color: #ff0000;
+  color: #fa4e2d;
+  font-size: 24px;
 }
 
 .schedule-heading {
   margin-top: 16px;
-  color: #ff0000;
+  color: #fa4e2d;
   font-size: 28px;
   line-height: 1.2;
   text-align: center;
@@ -103,7 +106,7 @@
   display: inline-block;
   margin-top: 32px;
   padding: 10px 16px;
-  border: 1px solid #ff0000;
+  border: 1px solid #fa4e2d;
   color: #ffffff;
   font-family: "Times New Roman", serif;
   font-size: 18px;
@@ -112,7 +115,7 @@
 
 .schedule-download:hover,
 .schedule-download:focus-visible {
-  background: #ff0000;
+  background: #fa4e2d;
   color: #000000;
 }
 
@@ -135,7 +138,7 @@
   }
 
   .schedule-entry {
-    grid-template-columns: 130px minmax(0, 1fr);
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: 12px;
   }
 }

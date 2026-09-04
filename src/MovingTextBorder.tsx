@@ -8,6 +8,7 @@ type Props = {
   backgroundColor?: string;
   height?: number;
   direction?: 'left' | 'right'; // for movement direction
+  isPaused?: boolean;
 };
 
 export function MovingTextBorder({
@@ -17,10 +18,12 @@ export function MovingTextBorder({
   color = "#fff",
   backgroundColor = "#282c34",
   height = 48,
-  direction = 'right'
+  direction = 'right',
+  isPaused = false
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
+  const offsetRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -35,7 +38,6 @@ export function MovingTextBorder({
     canvas.height = height * dpr;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
-    let offset = 0;
     let lastTime = performance.now();
     function draw(now: number) {
       const canvas = canvasRef.current;
@@ -46,17 +48,19 @@ export function MovingTextBorder({
       const textWidth = ctx.measureText(text).width;
       const elapsed = (now - lastTime) / 1000;
       lastTime = now;
-      // Move right if direction is 'right', left if 'left'
-      offset += (direction === 'right' ? 1 : -1) * speed * elapsed;
-      if (offset < -textWidth) offset += textWidth;
-      if (offset > 0) offset -= textWidth;
+      if (!isPaused) {
+        // Move right if direction is 'right', left if 'left'
+        offsetRef.current += (direction === 'right' ? 1 : -1) * speed * elapsed;
+        if (offsetRef.current < -textWidth) offsetRef.current += textWidth;
+        if (offsetRef.current > 0) offsetRef.current -= textWidth;
+      }
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = backgroundColor;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.font = `bold ${fontSize}px 'Times New Roman', serif`;
       ctx.fillStyle = color;
       ctx.textBaseline = "middle";
-      let x = offset;
+      let x = offsetRef.current;
       const limit = canvas.offsetWidth;
       while (x < limit) {
         ctx.fillText(text, x, height / 2);
@@ -68,7 +72,7 @@ export function MovingTextBorder({
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, [text, speed, fontSize, color, backgroundColor, height]);
+  }, [text, speed, fontSize, color, backgroundColor, height, direction, isPaused]);
 
   return (
     <canvas
@@ -78,8 +82,8 @@ export function MovingTextBorder({
         height: height,
         display: 'block',
         background: backgroundColor,
-        borderTop: '2.5px solid #ff0000',
-        borderBottom: '2.5px solid #ff0000'
+        borderTop: '2.5px solid #fa4e2d',
+        borderBottom: '2.5px solid #fa4e2d'
       }}
       height={height}
     />
@@ -167,10 +171,10 @@ export function MovingTextBorderVertical({
         height: '100vh',
         display: 'block',
         background: backgroundColor,
-        borderTop: '2.5px solid #ff0000',
-        borderBottom: '2.5px solid #ff0000',
-        borderLeft: '2.5px solid #ff0000', // outer edge for right border
-        borderRight: '2.5px solid #ff0000', // outer edge for left border
+        borderTop: '2.5px solid #fa4e2d',
+        borderBottom: '2.5px solid #fa4e2d',
+        borderLeft: '2.5px solid #fa4e2d', // outer edge for right border
+        borderRight: '2.5px solid #fa4e2d', // outer edge for left border
       }}
       width={width}
       height={window.innerHeight}

@@ -12,7 +12,7 @@ code {
 
 .cfp_description{
   font-family: "Times New Roman", serif;
-  font-size: 23px;
+  font-size: 24px;
   width: 100%;
   max-width: 900px;
   padding-inline: 0;
@@ -23,6 +23,6 @@ code {
 @media (max-width: 600px) {
   .cfp_description {
     padding-inline: 24px;
-    font-size: 20px;
+    font-size: 24px;
   }
 }

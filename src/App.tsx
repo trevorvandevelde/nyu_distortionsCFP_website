@@ -48,13 +48,10 @@ function MaraMillsBio() {
     <div className="keynote-bio">
       <p>
         Mara Mills is Associate Professor and Ph.D. Director in the Department of Media, Culture, and Communication at New York University.
-        She is cofounder and Director of the <a href="https://disabilitystudies.nyu.edu/">NYU Center for Disability Studies</a>; founding director of the NYU cross-school minor in <a href="https://steinhardt.nyu.edu/mcc/undergraduate/disability_minor">Disability Studies</a>; and a founding editor of the award-winning journal <a href="https://catalystjournal.org/index.php/catalyst">Catalyst: Feminism, Theory, Technoscience</a>.
+        She is cofounder and Director of the <a href="https://disabilitystudies.nyu.edu/">NYU Center for Disability Studies</a>; founding director of the NYU cross-school minor in <a href="https://steinhardt.nyu.edu/mcc/undergraduate/disability_minor">Disability Studies</a>; and a founding editor of the award-winning journal <a href="https://catalystjournal.org/index.php/catalyst">Catalyst: Feminism, Theory, Technoscience</a>. She is also a founding member of the steering committees for the NYU cross-school minor in <a href="http://www.nyu.edu/students/undergraduates/academic-services/undergraduate-advisement/unique-academic-opportunities/cross-school-minors/cross-school-minors-alphabetically/minor-in-science-and-society.html">Science and Society</a>.
       </p>
       <details>
         <summary>SEE MORE</summary>
-        <p>
-          She is also a founding member of the steering committees for the NYU cross-school minor in <a href="http://www.nyu.edu/students/undergraduates/academic-services/undergraduate-advisement/unique-academic-opportunities/cross-school-minors/cross-school-minors-alphabetically/minor-in-science-and-society.html">Science and Society</a>.
-        </p>
         <p>
           Trained in Biology (BA, MA), Literature (BA), Education (MA), and History of Science (PhD), Mills is an interdisciplinary scholar and teacher in the fields of disability studies, Science and Technology Studies, and sound studies. Her work on “disability and media” spans disability arts and technoscience, with a focus on the history, politics, and cultures of electronics and digital media. The author or coauthor of over 80 articles, chapters, and reviews, her work has received the IEEE History Prize, the Walter Benjamin Award, and the Irving Zola Award, among other honors. She is also a recipient of the Jim Ferris Award for Outstanding Achievement in Disability and Communication. Her writing has been translated into German, French, Spanish, and Portuguese.
         </p>
@@ -100,7 +97,8 @@ function KaBairdBio() {
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState(getCurrentPage);
-  const [homeColor, setHomeColor] = useState("#f04444");
+  const [homeColor, setHomeColor] = useState("#fa4e2d");
+  const [isBorderPaused, setIsBorderPaused] = useState(false);
   const movingText =
     "DISTORTION  OVERDRIVE  GRAIN  SYNTHESIS  NOISE  STATIC  INTERFERENCE  WARPING  BENDING  SPIRALS  FRACTALS  PLASTICITY  DEFORMATION  DISINFORMATION  MISINFORMATION  FASCISM  PROPAGANDA  CENSORSHIP  POST-TRUTH  CONSPIRACY  FRAUD  FAKES  FORGERY  BOOTLEGGING  PIRACY  ARTIFICIALITY  STREAMING  MANIPULATION  FAILURE  CORRUPTION  GLITCH  MUTATION  TRANSFORMATION  TRANSLATION  DISRUPTION  ALTERNATE  REALITIES  QUEER  TEMPORALITIES  LIMINALITY  NON-PLACE  TIME  SPACE  SIMULATION  SPECULATIVE  FICTION  SONIC  FICTION  CRITICAL  FABULATION  FUTURITIES  PARA-SOCIALITY  CIRCULATION  CYBERNETICS  ARTIFICIAL  INTELLIGENCE  SUPERSTITION  URBAN  LEGEND  (MEDIA)  FOLKLORE  TECHNO-DOPING  SURGERY  BIOHACKING  TRAUMA  MENTAL  HEALTH  GHOSTS  HAUNTING  VERTIGO  DISORIENTATION  NEURODIVERGENCE  AND  MASKING  ALTERNATE  TUNINGS  DIY  INSTRUMENTS/MUSIC  SPACES  HACKING  AUDITORY  ILLUSIONS "
 
@@ -127,14 +125,27 @@ export default function App() {
           <MovingTextBorder
             text={movingText}
             fontSize={22}
-            color="#ff0000"
+            color="#fa4e2d"
             backgroundColor="#282c34"
             height={48}
             speed={80}
             direction={"right"}
+            isPaused={isBorderPaused}
           />
         </div>
       </a>
+
+      <button
+        className="pause-border-button"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setIsBorderPaused(!isBorderPaused);
+        }}
+        aria-label={isBorderPaused ? "Resume scrolling text" : "Pause scrolling text"}
+      >
+        {isBorderPaused ? "PLAY" : "PAUSE"}
+      </button>
 
       <nav className="site-navigation" aria-label="Conference sections">
         {Object.entries(pageNames).map(([pageId, pageName]) => (
@@ -155,11 +166,12 @@ export default function App() {
           <MovingTextBorder
             text={movingText}
             fontSize={22}
-            color="#ff0000"
+            color="#fa4e2d"
             backgroundColor="#282c34"
             height={48}
             speed={80}
             direction={"left"}
+            isPaused={isBorderPaused}
           />
         </div>
       </a>
@@ -180,20 +192,20 @@ export default function App() {
         </header>
       ) : isCallForProposals ? (
       <header className="App-header" id="call-for-proposals">
-        <DistortionText text="CALL FOR PROPOSALS" fontSize={45} varySize={false} color="#ff0000"/>
+        <DistortionText text="CALL FOR PROPOSALS" fontSize={45} varySize={false} color="#fa4e2d"/>
         <DistortionText text="DISTORTIONS" customSizes={[50, 53, 57, 53, 50, 47, 50, 53, 57, 53, 50, 47]}/>
         <p className="cfp_description"></p>
 
         <p className="cfp_description" style={{ lineHeight: 1.5 }}>
-          The term <DistortionText text="distortion" fontSize={17} varySize={false} /> is derived from the Latin <em>dis</em>, meaning apart or away, and <em>torquere</em>,
+          The term <DistortionText text="distortion" fontSize={24} varySize={false} /> is derived from the Latin <em>dis</em>, meaning apart or away, and <em>torquere</em>,
           meaning to twist. It refers to the bending, warping, or deformation of an object’s shape and/or form.
-          In a sonic context, <DistortionText text="distortion" fontSize={17} varySize={false} /> is used to describe the alteration of an audio signal or wave. It is often
+          In a sonic context, <DistortionText text="distortion" fontSize={24} varySize={false} /> is used to describe the alteration of an audio signal or wave. It is often
           characterized by a harsh, gritty sound. Through the amplification of what are generally considered
-          imperfections, errors, or failures, <DistortionText text="distortion" fontSize={17} varySize={false} /> performs an array of functions: it interrogates, confuses,
+          imperfections, errors, or failures, <DistortionText text="distortion" fontSize={24} varySize={false} /> performs an array of functions: it interrogates, confuses,
           vulgarizes, disrupts, alienates, subverts. At the same time, scrubbing a recording of its so-called
-           imperfections also involves a warping of sonic materials; attempting to rid an object of <DistortionText text="distortion" fontSize={17} varySize={false} />{" "}
-            only distorts further. <DistortionText text="Distortion" fontSize={17} varySize={false} /> can be weaponized by the powerful, just as it can function as a tool
-          of resistance, liberation, and imagining. This conference explores <DistortionText text="distortion" fontSize={17} varySize={false} /> and its various
+           imperfections also involves a warping of sonic materials; attempting to rid an object of <DistortionText text="distortion" fontSize={24} varySize={false} />{" "}
+            only distorts further. <DistortionText text="Distortion" fontSize={24} varySize={false} /> can be weaponized by the powerful, just as it can function as a tool
+          of resistance, liberation, and imagining. This conference explores <DistortionText text="distortion" fontSize={24} varySize={false} /> and its various
           overlapping contexts: sonic, political, metaphysical, aesthetic, literary, bodily, legal, and more.
         </p>
         <p className="cfp_description">
@@ -273,7 +285,7 @@ export default function App() {
           </p>
           <p>
             Download a PDF of the CfP{" "}
-            <a href="http://localhost:3000/Distortions%20Conference%20CfP.pdf">here</a>.
+            <a href="/Distortions%20Conference%20CFP.pdf" download>here</a>.
           </p>
         </section>
 
@@ -310,7 +322,7 @@ export default function App() {
           <section className="keynote-profile">
             <h2>KEYNOTE SPEAKER</h2>
             <h3><a href="https://maramills.org/" target="_blank" rel="noopener noreferrer">Mara Mills</a></h3>
-            <p className="keynote-placeholder">Assistant Professor of Media, Culture, and Communication, New York University</p>
+            <p className="keynote-placeholder">Associate Professor of Media, Culture, and Communication, New York University</p>
             <div className="keynote-photo">
               <img src="/Mara Mills Photo by Blair Rinn.jpg" alt="Mara Mills" />
             </div>

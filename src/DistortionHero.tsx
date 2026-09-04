@@ -5,7 +5,7 @@ type DistortionHeroProps = {
   onColorChange?: (color: string) => void;
 };
 
-const backgroundColors = ["#f04444", "#2517b8", "#f5d957"];
+const backgroundColors = ["#fa4e2d", "#2517b8", "#f5d957"];
 
 export default function DistortionHero({ text, onColorChange }: DistortionHeroProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
