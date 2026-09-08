@@ -25,7 +25,6 @@ Introductory Remarks (Silver 320)
 
 9:00 a.m. - 5:00 p.m.
 Installations (Silver 120)
-- Skyler Zheng, Vision Noise
 - Bria Nachele, Bridge Over Troubled Waters / Still Watters Run Deep
 
 9:15 a.m. - 10:45 a.m.
@@ -58,7 +57,7 @@ Concert 1 (Silver 220)
 Panel 3: Warping Space (Silver 320)
 Chair: Fanny Gribenski
 - Sophia Cocozza, "Distorting the Environment: Carolee Schneemann and the Sound of Collision"
-- Jenn Grossman, "Tracing the Blur: Exploring Reverb's Psycho-Spatial Resonance"
+- Jenn Grossman, "Tracing the Blur: Exploring the Affective Potentials of Reverb’s Psycho-Spatial Resonance"
 - Jessie Monts, "Knowing after Postmodernism: Ecological Imaginings of Spatio-Temporal Epistemology in Jessie Montgomery's Rounds"
 
 5:15 p.m. - 6:45 p.m.
@@ -84,7 +83,6 @@ Breakfast (Silver 120)
 
 9:00 a.m. - 5:00 p.m.
 Installations (Silver 120)
-- Skyler Zheng, Vision Noise
 - Bria Nachele, Bridge Over Troubled Waters / Still Watters Run Deep
 
 9:00 a.m. - 10:30 a.m.
@@ -107,7 +105,7 @@ Lunch (Silver 120)
 1:15 p.m. - 2:45 p.m.
 Panel 7: Twisting Narratives and Semiotics (Silver 320)
 Chair: David Samuels
-- Jardena Gertler-Jaffe, "Jewish Opera? The Look and Sound of Jewish Difference in Bates's Kavalier and Clay"
+- Jardena Gertler-Jaffe, "Chronotopes of Jewish Persona in Bates’ Kavalier and Clay"
 - Ellen Jeon, "IMDb Sorting Algorithms and the Semiotics of Audience Voice in Squid Game"
 - Zachary Walker-Kahne, "The False Promise of Music in Dorothy Baker's Young Man with a Horn (1938) and Michael Ondaatje's Coming Through Slaughter (1976)"
 
