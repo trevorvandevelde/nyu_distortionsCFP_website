@@ -258,6 +258,37 @@ body {
   text-align: left;
 }
 
+.archive-page {
+  justify-content: flex-start;
+}
+
+.archive-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 28px auto 0;
+}
+
+.archive-poster {
+  margin: 0;
+}
+
+.archive-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .archive-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
+
 .keynote-page {
   justify-content: flex-start;
 }

@@ -11,6 +11,7 @@ const pageNames: Record<string, string> = {
   "keynote-info": "Keynote Info",
   "venues-accessibility": "Access",
   "call-for-proposals": "Call",
+  archive: "Archive",
   contact: "Contact",
 };
 
@@ -87,6 +88,7 @@ export default function App() {
   const isKeynoteInfo = currentPage === "keynote-info";
   const isRegistration = currentPage === "registration";
   const isSchedule = currentPage === "schedule-program";
+  const isArchive = currentPage === "archive";
 
   return (
     <div className={`App ${isHome ? "App--home" : ""}`} style={{ position: 'relative', minHeight: '100vh' }}>
@@ -347,6 +349,18 @@ export default function App() {
               If a paper program would be helpful to you in terms of accessibility, do not hesitate to let one of our conference
               volunteers know and we will provide you with a paper copy.
             </p>
+          </div>
+        </main>
+      ) : isArchive ? (
+        <main className="App-header filler-page archive-page">
+          <DistortionText text="ARCHIVE" fontSize={45} varySize={false} color="#ffffff" />
+          <div className="archive-gallery" aria-label="Distortions conference posters">
+            <figure className="archive-poster">
+              <img src={`${process.env.PUBLIC_URL}/distortions_posters_11x17grey.jpg`} alt="Distortions conference poster in grey" />
+            </figure>
+            <figure className="archive-poster">
+              <img src={`${process.env.PUBLIC_URL}/distortions_posters_11x17red.jpg`} alt="Distortions conference poster in red" />
+            </figure>
           </div>
         </main>
       ) : isContact ? (

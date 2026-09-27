@@ -5,6 +5,7 @@ test('renders the conference navigation', async () => {
   const { container } = render(<App />);
   expect(screen.getByRole('navigation', { name: /conference sections/i })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /call for proposals/i })).toHaveAttribute('href', '#call-for-proposals');
+  expect(screen.getByRole('link', { name: /archive/i })).toHaveAttribute('href', '#archive');
   expect(container.querySelector('.home-page')).toBeInTheDocument();
 
   fireEvent.click(screen.getByRole('link', { name: /contact/i }));
