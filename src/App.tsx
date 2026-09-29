@@ -324,6 +324,10 @@ export default function App() {
               <li>Open a web browser and go to any web page. The browser will be automatically redirected to the nyuguest login page.</li>
               <li>Log in with the following event guest username and password:</li>
             </ol>
+            <p className="venue-highlight wifi-credentials">
+              <strong>Username:</strong> ffas-music3<br />
+              <strong>Password:</strong> zznH213R
+            </p>
 
             <h2>CONFERENCE ACCESSIBILITY</h2>
             <p className="venue-highlight">
@@ -354,12 +358,21 @@ export default function App() {
       ) : isArchive ? (
         <main className="App-header filler-page archive-page">
           <DistortionText text="ARCHIVE" fontSize={45} varySize={false} color="#ffffff" />
-          <div className="archive-gallery" aria-label="Distortions conference posters">
-            <figure className="archive-poster">
+          <div className="archive-gallery" aria-label="Distortions conference posters and graphics">
+            <figure className="archive-item">
               <img src={`${process.env.PUBLIC_URL}/distortions_posters_11x17grey.jpg`} alt="Distortions conference poster in grey" />
             </figure>
-            <figure className="archive-poster">
+            <figure className="archive-item">
               <img src={`${process.env.PUBLIC_URL}/distortions_posters_11x17red.jpg`} alt="Distortions conference poster in red" />
+            </figure>
+            <figure className="archive-item">
+              <img src={`${process.env.PUBLIC_URL}/1-removebg-preview.png`} alt="Distortions wordmark in red, yellow, and blue" />
+            </figure>
+            <figure className="archive-item">
+              <img src={`${process.env.PUBLIC_URL}/4-removebg-preview.png`} alt="Collage-style Distortions graphic with cutout lettering" />
+            </figure>
+            <figure className="archive-item">
+              <img src={`${process.env.PUBLIC_URL}/5-removebg-preview.png`} alt="Three colorful circular Distortions record graphics" />
             </figure>
           </div>
         </main>

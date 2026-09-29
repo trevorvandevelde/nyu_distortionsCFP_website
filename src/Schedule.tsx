@@ -190,8 +190,8 @@ export default function Schedule() {
       <div className="schedule-column" role="tabpanel">
         {renderScheduleText(scheduleForDay)}
       </div>
-      <a className="schedule-download" href="/Distortions Conference Website.pdf" download>
-        DOWNLOAD SCHEDULE PDF
+      <a className="schedule-download" href="/Distortions%20Conference%20Program%20Final.pdf" download>
+        Download Program PDF
       </a>
     </main>
   );

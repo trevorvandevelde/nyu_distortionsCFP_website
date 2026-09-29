@@ -271,11 +271,11 @@ body {
   margin: 28px auto 0;
 }
 
-.archive-poster {
+.archive-item {
   margin: 0;
 }
 
-.archive-poster img {
+.archive-item img {
   display: block;
   width: 100%;
   height: auto;
@@ -415,6 +415,11 @@ body {
 
 .venue-content p {
   margin: 16px 0;
+}
+
+.venue-content .wifi-credentials {
+  display: block;
+  text-align: center;
 }
 
 .venue-content ol {
